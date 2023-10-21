@@ -587,7 +587,7 @@ class Server:
 
 
 
-        ppdb = PandasPdb()
+        ppdb = PandasPdb()  # use bio-pandas to read pdb
         ppdb.read_pdb(DIR_InputPdbFile)
         
         assert ppdb.df['ATOM'].shape[0] != 0, "ABORTED. User submitted a empty pdb file"
